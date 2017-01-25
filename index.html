@@ -2,52 +2,67 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <style>
-        h1,di{color:blueviolet;font-size:40px;}
-        p{color:#FF0000;font-size:3cm}
-        #title1{color:darksalmon;}
-        #theone{color:beige;}
-        div{background-position:top center}
-        .title{color:rgb(255,0,255);}
-}
-        a:link{color:red;}
-    </style>
     <title>Document</title>
+    <style>
+   ul{background-color:blue;
+    color:black;
+    list-style-type:none;
+    font-size:20px;
+}
+ul>li{
+   display:inline-block;
+    width:100px;
+     position:relative;
+}
+ ul>li:hover{
+    background-color:green;
+   }
+ul.submenu {
+  position:absolute;
+  padding-left:0px;
+  width: 100px;
+  opacity:0;
+  background-color:green;
+}
+ul.subsubmenu {
+  display:block;
+   position:absolute;
+   background-color:gray;
+   padding:0;
+   left: 70px;
+  opacity:0;
+}
+ul.submenu li:hover {
+  background-color:white;
+  }
+  .navbarmenu li:hover .submenu {
+    opacity:1;
+ } 
+ ul.submenu li:hover  .subsubmenu{
+    opacity:1;
+ } 
+    </style>
 </head>
 <body>
-   
-   <h1>789456123</h1>
-   <nav>
-   <h2 id="title1">78946521327465798</h2>
-    </nav>
-   <article>
-   <h3 class="title">789456132</h3>
-   <p>ydeudetnoononoe</p>
-   <a href="http://zh-tw.learnlayout.com/display.html">dadadadadaddadadadada</a>
-   <article>
-   <div><p>Lorem ipsum <br> dolor sit amet,<section>
-       <a href="https://goo.gl/images/3YTVAq">KITTY</a>consectetur adipisicing elit, </section>section>sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam,
-quis nostrud exercitation.</p></div>
-      <h4 id="theone">abbaa</h4>
-      <h5 id="title1" > ohhtoenuoehu</h5>        
-       
-         <table>
-        <thead>
-            <th></th>
-            <th></th>
-            <th></th>
-            <tfoot>
-                <th></th>
-                <th></th>
-                <th></th>
-                <tbody>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tbody>
-            </tfoot>
-        </thead>
-    </table>
+ <nav>
+  <ul class="navbarmenu">
+  <li>one
+    <ul class="submenu">
+     <li>sub
+        <ul class="subsubmenu">
+         <li>subb</li>
+         <li>subb</li>
+         <li>subb</li>
+         </ul>
+  
+     </li>
+      <li>sub</li>
+      <li>sub</li>
+      </ul>
+    </li>
+    <li>two</li>
+    <li>three</li>
+  </ul>
+</nav>
 </body>
 </html>
